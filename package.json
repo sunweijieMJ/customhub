@@ -11,10 +11,9 @@
   },
   "scripts": {
     "cz": "git-cz",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "dev": "pnpm -C play dev",
-    "gen": "bash ./scripts/gc.sh",
     "yalc": "bash ./scripts/yalc.sh",
+    "gen": "bash ./scripts/gc.sh",
     "gen:version": "sucrase-node scripts/gen-version.ts",
     "update:version": "sucrase-node scripts/update-version.ts",
     "clean": "pnpm run clean:lib && pnpm run clean -r --stream",
@@ -29,6 +28,7 @@
     "docs:dev": "pnpm run -C docs dev",
     "docs:build": "pnpm run -C docs build",
     "docs:serve": "pnpm run -C docs serve",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "prepare": "husky install",
     "postinstall": "pnpm gen:version",
     "preinstall": "npx only-allow pnpm -y"
