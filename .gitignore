@@ -23,7 +23,6 @@ pnpm-lock.yaml
 yalc.lock
 
 # Editor directories and files
-.github
 .idea
 *.suo
 *.ntvs*
