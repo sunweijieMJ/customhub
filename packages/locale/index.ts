@@ -1,5 +1,4 @@
 import dayjs from 'dayjs';
-import { debugWarn } from '@linehub/utils/error';
 import defaultLang from './lang/zh-cn';
 
 export type TranslatePair = {
@@ -55,7 +54,7 @@ export const t = (...args: any[]): string => {
 };
 
 export const use = (l: Language): void => {
-  debugWarn(
+  console.warn(
     'deprecation',
     `:
       The previous i18n usage is deprecated please update to

@@ -1,0 +1,47 @@
+@use 'sass:map';
+
+.line-image {
+  height: inherit;
+  position: relative;
+  width: inherit;
+
+  .el-image {
+    height: inherit;
+    width: inherit;
+  }
+
+  .preview-wrap {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ccc;
+    display: flex;
+    font-size: 20px;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.3s;
+    width: 100%;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    .el-icon-zoom-in {
+      cursor: pointer;
+      font-size: 24px;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .image-slot,
+  .image-slot .default {
+    height: inherit;
+    width: inherit;
+  }
+}

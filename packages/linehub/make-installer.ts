@@ -5,7 +5,7 @@ const makeInstaller = (components: any[] = []) => {
     if ((install as any).installed) return;
     (install as any).installed = true;
     components.forEach((component: any) => {
-      // 在ts的版本中需要使用component.extendOptions.name，具体原因可以自己log看一下
+      // 在ts的版本中需要使用component.extendOptions.name
       Vue.component(component.extendOptions.name, component);
     });
   };

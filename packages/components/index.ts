@@ -1,2 +1,2 @@
 export * from './switch';
-// plugins
+export * from './image';

@@ -1,13 +1,15 @@
 <template>
-  <div class="demo">
-    <LineSwitch :checked.sync="checkedValue" />
+  <div class="app">
+    <LineSwitch :checked.sync="value1" />
+    <ElSwitch v-model="value2" />
   </div>
 </template>
 <script lang="ts">
 export default {
   data() {
     return {
-      checkedValue: true,
+      value1: true,
+      value2: true,
     };
   },
 };
