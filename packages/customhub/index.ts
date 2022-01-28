@@ -2,7 +2,7 @@ import installer from './defaults';
 
 export * from '@customhub/components';
 export * from '@customhub/directives';
-export * from '@customhub/hooks';
+export * from '@customhub/mixins';
 
 export { default as makeInstaller } from './make-installer';
 

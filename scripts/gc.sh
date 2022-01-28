@@ -31,31 +31,24 @@ mkdir -p "$DIRNAME/src"
 
 cat > $DIRNAME/src/index.vue <<EOF
 <template>
-  <div>
-    <slot></slot>
-  </div>
+  <div>Line${NAME}</div>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { Vue, Component } from 'vue-property-decorator';
 
-export default defineComponent({
+@Component({
   name: 'Line${NAME}',
-  props: {},
-  setup(props) {
-    // init here
-  },
-});
+})
+export default class Line${NAME} extends Vue {}
 </script>
 <style></style>
 EOF
 
 cat <<EOF >"$DIRNAME/index.ts"
-import { App } from 'vue';
+import { withInstall } from '@customhub/utils/with-install';
+
 import ${NAME} from './src/index.vue';
 
-${NAME}.install = (app: App): void => {
-  app.component(${NAME}.name, ${NAME});
-};
-
-export default ${NAME};
+export const Line${NAME} = withInstall(${NAME});
+export default Line${NAME};
 EOF

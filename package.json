@@ -57,7 +57,7 @@
   "dependencies": {
     "@customhub/components": "workspace:*",
     "@customhub/directives": "workspace:*",
-    "@customhub/hooks": "workspace:*",
+    "@customhub/mixins": "workspace:*",
     "@customhub/locale": "workspace:*",
     "@customhub/theme-chalk": "workspace:*",
     "@customhub/utils": "workspace:*",

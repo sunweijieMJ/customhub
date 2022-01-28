@@ -50,12 +50,15 @@
 </template>
 <script lang="ts">
 import { Vue, Component, Prop, Watch } from 'vue-property-decorator';
+import { locale } from '@customhub/mixins';
+import { t } from '@customhub/locale';
 
 type SwitchSizes = 'small' | 'default' | 'large';
 type CheckedType = boolean | string | number;
 
 @Component({
   name: 'LineSwitch',
+  mixins: [locale],
 })
 export default class LineSwitch extends Vue {
   @Prop({ default: 'line-switch' }) private prefixCls!: string;
@@ -63,10 +66,10 @@ export default class LineSwitch extends Vue {
   @Prop({ default: false }) private disabled!: boolean;
   @Prop({ default: false }) private loading!: boolean;
 
-  @Prop({ default: '启用' })
+  @Prop({ default: t('line.switch.enable') })
   private checkedChildren!: string;
 
-  @Prop({ default: '禁用' })
+  @Prop({ default: t('line.switch.disable') })
   private unCheckedChildren!: string;
 
   @Prop({ default: '#5755B3' }) private checkedColor!: string;

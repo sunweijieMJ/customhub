@@ -1,5 +1,5 @@
 {
-  "name": "@customhub/hooks",
+  "name": "@customhub/mixins",
   "description": "Customhub composables",
   "version": "1.0.0",
   "main": "index.ts",
