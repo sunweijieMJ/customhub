@@ -1,6 +1,6 @@
 export default {
   name: 'en',
-  line: {
+  custom: {
     switch: {
       enable: 'Enable',
       disable: 'Disable',

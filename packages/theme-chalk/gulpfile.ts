@@ -34,7 +34,7 @@ function buildThemeChalk() {
     .pipe(
       rename((path) => {
         if (!noElPrefixFile.test(path.basename)) {
-          path.basename = `line-${path.basename}`;
+          path.basename = `custom-${path.basename}`;
         }
       })
     )

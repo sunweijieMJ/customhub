@@ -1,5 +1,5 @@
 <template>
-  <div class="line-image" :style="{ backgroundColor: mainColor }">
+  <div class="custom-image" :style="{ backgroundColor: mainColor }">
     <el-image
       ref="image"
       :src="currentSrc"
@@ -54,9 +54,9 @@ import { Vue, Component, Prop, Watch } from 'vue-property-decorator';
 import { handleImage } from '@customhub/utils/tools';
 
 @Component({
-  name: 'LineImage',
+  name: 'CustomImage',
 })
-export default class LineImage extends Vue {
+export default class CustomImage extends Vue {
   @Prop({ default: true }) private isOss!: boolean; // 是否为oss图片
   @Prop({ default: false }) private showBgColor!: boolean; // 是否显示背景色
   @Prop({ default: false }) private preview!: boolean; // 是否预览

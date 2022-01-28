@@ -4,17 +4,17 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
 // eslint-disable-next-line
-import Customhub from '../dist/customhub/dist/index.full';
+import CustomHub from '../dist/customhub/dist/index.full.min.mjs';
 // eslint-disable-next-line
 import '../dist/customhub/theme-chalk/index.css';
 
 // eslint-disable-next-line
 import App from './src/App.vue';
 
-console.log(Customhub);
+console.log(CustomHub);
 
 Vue.use(ElementUI);
-Vue.use(Customhub);
+Vue.use(CustomHub);
 
 new Vue({
   render: (h) => h(App),

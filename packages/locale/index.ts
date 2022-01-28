@@ -7,7 +7,7 @@ export type TranslatePair = {
 
 export type Language = {
   name: string;
-  line: TranslatePair;
+  custom: TranslatePair;
 };
 
 let lang: Language = defaultLang as Language;
@@ -54,15 +54,6 @@ export const t = (...args: any[]): string => {
 };
 
 export const use = (l: Language): void => {
-  console.warn(
-    'deprecation',
-    `:
-      The previous i18n usage is deprecated please update to
-      the new one to get reactive i18n translations, refer to:
-      https://customhub.org/#/en-US/component/i18n
-    `
-  );
-
   lang = l || lang;
   if (lang.name) {
     dayjs.locale(lang.name);

@@ -120,7 +120,6 @@
     "vue": "2.6.14",
     "vue-class-component": "^7.2.6",
     "vue-property-decorator": "^9.1.2",
-    "vue-router": "4.0.12",
     "vue-template-compiler": "^2.6.14",
     "vue-tsc": "0.29.8"
   }

@@ -1,2 +1,2 @@
 import '@customhub/components/base/style/css';
-import '@customhub/theme-chalk/line-image.css';
+import '@customhub/theme-chalk/custom-image.css';

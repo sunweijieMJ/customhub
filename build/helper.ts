@@ -5,7 +5,7 @@ import { epPackage, epOutput, projRoot } from './utils/paths';
 import { getPackageManifest } from './utils/pkg';
 
 const reComponentName = (title: string) =>
-  `line-${title
+  `custom-${title
     .replace(/\B([A-Z])/g, '-$1')
     .replace(/[ ]+/g, '-')
     .toLowerCase()}`;
@@ -18,7 +18,7 @@ const reDocUrl = (fileName, header) => {
 };
 
 const reWebTypesSource = (title) => {
-  const symbol = `Line${title
+  const symbol = `Custom${title
     .replaceAll(/-/g, ' ')
     .replaceAll(/^\w|\s+\w/g, (item) => {
       return item.trim().toUpperCase();
@@ -54,8 +54,8 @@ const reAttribute = (value, key) => {
       : str.replace(/`/g, '');
   } else if (key === 'Subtags') {
     return str
-      ? `line-${str
-          .replaceAll(/\s*\/\s*/g, '/line-')
+      ? `custom-${str
+          .replaceAll(/\s*\/\s*/g, '/custom-')
           .replaceAll(/\B([A-Z])/g, '-$1')
           .replaceAll(/\s+/g, '-')
           .toLowerCase()}`

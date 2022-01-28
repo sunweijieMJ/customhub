@@ -1,4 +1,4 @@
-import LineSwitch from '@customhub/components/switch';
-import LineImage from '@customhub/components/image';
+import CustomSwitch from '@customhub/components/switch';
+import CustomImage from '@customhub/components/image';
 
-export default [LineSwitch, LineImage];
+export default [CustomSwitch, CustomImage];

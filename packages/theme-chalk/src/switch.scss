@@ -6,13 +6,13 @@
   }
 }
 
-$switch-prefix: 'line-switch';
+$switch-prefix: 'custom-switch';
 $switch-height: 22px;
-$disabled-color: var(--LineSwitchUnCheckedColor);
+$disabled-color: var(--CustomSwitchUnCheckedColor);
 $switch-duration: 0.36s;
 $text-color-inverse: #fff;
 $switch-bg: #fff;
-$switch-color: var(--LineSwitchCheckedColor);
+$switch-color: var(--CustomSwitchCheckedColor);
 $text-color: fade-out(#000, 0.15);
 $switch-shadow-color: fade-out(#000, 0.8);
 $switch-disabled-opacity: 0.4;

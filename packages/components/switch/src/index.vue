@@ -57,19 +57,19 @@ type SwitchSizes = 'small' | 'default' | 'large';
 type CheckedType = boolean | string | number;
 
 @Component({
-  name: 'LineSwitch',
+  name: 'CustomSwitch',
   mixins: [locale],
 })
-export default class LineSwitch extends Vue {
-  @Prop({ default: 'line-switch' }) private prefixCls!: string;
+export default class CustomSwitch extends Vue {
+  @Prop({ default: 'custom-switch' }) private prefixCls!: string;
   @Prop({ default: 'default' }) private size!: SwitchSizes;
   @Prop({ default: false }) private disabled!: boolean;
   @Prop({ default: false }) private loading!: boolean;
 
-  @Prop({ default: t('line.switch.enable') })
+  @Prop({ default: t('custom.switch.enable') })
   private checkedChildren!: string;
 
-  @Prop({ default: t('line.switch.disable') })
+  @Prop({ default: t('custom.switch.disable') })
   private unCheckedChildren!: string;
 
   @Prop({ default: '#5755B3' }) private checkedColor!: string;
@@ -84,8 +84,8 @@ export default class LineSwitch extends Vue {
 
   private get cssVars() {
     return {
-      '--LineSwitchCheckedColor': this.checkedColor,
-      '--LineSwitchUnCheckedColor': this.unCheckedColor,
+      '--CustomSwitchCheckedColor': this.checkedColor,
+      '--CustomSwitchUnCheckedColor': this.unCheckedColor,
     };
   }
 

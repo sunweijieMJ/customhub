@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <LineSwitch :checked.sync="value1" />
+    <CustomSwitch :checked.sync="value1" />
     <ElSwitch v-model="value2" />
   </div>
 </template>

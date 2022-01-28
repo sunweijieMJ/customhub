@@ -31,15 +31,15 @@ mkdir -p "$DIRNAME/src"
 
 cat > $DIRNAME/src/index.vue <<EOF
 <template>
-  <div>Line${NAME}</div>
+  <div>Custom${NAME}</div>
 </template>
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 
 @Component({
-  name: 'Line${NAME}',
+  name: 'Custom${NAME}',
 })
-export default class Line${NAME} extends Vue {}
+export default class Custom${NAME} extends Vue {}
 </script>
 <style></style>
 EOF
@@ -49,6 +49,6 @@ import { withInstall } from '@customhub/utils/with-install';
 
 import ${NAME} from './src/index.vue';
 
-export const Line${NAME} = withInstall(${NAME});
-export default Line${NAME};
+export const Custom${NAME} = withInstall(${NAME});
+export default Custom${NAME};
 EOF

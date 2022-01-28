@@ -52,9 +52,7 @@
     "vue-property-decorator": "^9.1.2"
   },
   "devDependencies": {
-    "@types/node": "*",
-    "csstype": "^2.6.0",
-    "vue-router": "^4.0.0"
+    "@types/node": "*"
   },
   "vetur": {
     "tags": "tags.json",
