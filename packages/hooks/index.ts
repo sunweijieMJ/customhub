@@ -1,1 +1,1 @@
-export * from './use-locale';
+export const hooks = 'hooks';

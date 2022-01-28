@@ -1,7 +1,7 @@
 {
   "name": "@linehub/locale",
   "description": "Linehub locale",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "main": "index.ts",
   "module": "index.ts",
   "unpkg": "index.js",

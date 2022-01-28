@@ -34,136 +34,79 @@
         >
           <path
             d="M988 548c-19.9 0-36-16.1-36-36 0-59.4-11.6-117-34.6-171.3a440.45 440.45 0 00-94.3-139.9 437.71 437.71 0 00-139.9-94.3C629 83.6 571.4 72 512 72c-19.9 0-36-16.1-36-36s16.1-36 36-36c69.1 0 136.2 13.5 199.3 40.3C772.3 66 827 103 874 150c47 47 83.9 101.8 109.7 162.7 26.7 63.1 40.2 130.2 40.2 199.3.1 19.9-16 36-35.9 36z"
-          />
+          ></path>
         </svg>
       </span>
     </template>
     <span :class="`${prefixCls}-inner`">
       <template v-if="isChecked">
-        <slot name="checkedChildren">{{ finalCheckedChildren }}</slot>
+        <slot name="checkedChildren">{{ checkedChildren }}</slot>
       </template>
       <template v-else>
-        <slot name="unCheckedChildren">{{ finalUnCheckedChildren }}</slot>
+        <slot name="unCheckedChildren">{{ unCheckedChildren }}</slot>
       </template>
     </span>
   </button>
 </template>
 <script lang="ts">
-import { defineComponent, computed, watch, reactive } from 'vue';
-import type { PropType } from 'vue';
-import { useLocale } from '@linehub/hooks';
+import { Vue, Component, Prop, Watch } from 'vue-property-decorator';
 
 type SwitchSizes = 'small' | 'default' | 'large';
 type CheckedType = boolean | string | number;
 
-export default defineComponent({
+@Component({
   name: 'LineSwitch',
-  props: {
-    prefixCls: {
-      type: String,
-      default: 'line-switch',
-    },
-    size: {
-      type: String as PropType<SwitchSizes>,
-      default: 'default',
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-    loading: {
-      type: Boolean,
-      default: false,
-    },
-    checkedChildren: {
-      type: String,
-      default: '',
-    },
-    unCheckedChildren: {
-      type: String,
-      default: '',
-    },
-    checkedColor: {
-      type: String,
-      default: '#5755B3',
-    },
-    unCheckedColor: {
-      type: String,
-      default: 'rgba(0,0,0,.25)',
-    },
-    checkedValue: {
-      type: Boolean,
-      default: true,
-    },
-    unCheckedValue: {
-      type: Boolean,
-      default: false,
-    },
-    checked: {
-      type: Boolean as PropType<CheckedType>,
-      default: false,
-    },
-  },
-  emits: ['update:checked', 'change', 'click'],
-  setup(props, { emit }) {
-    const { t } = useLocale();
+})
+export default class LineSwitch extends Vue {
+  @Prop({ default: 'line-switch' }) private prefixCls!: string;
+  @Prop({ default: 'default' }) private size!: SwitchSizes;
+  @Prop({ default: false }) private disabled!: boolean;
+  @Prop({ default: false }) private loading!: boolean;
 
-    const finalCheckedChildren = computed(
-      () => props.checkedChildren || t('line.switch.enable')
-    );
-    const finalUnCheckedChildren = computed(
-      () => props.unCheckedChildren || t('line.switch.disable')
-    );
+  @Prop({ default: '启用' })
+  private checkedChildren!: string;
 
-    const checkedData = reactive({
-      checked: props.checked,
-    });
+  @Prop({ default: '禁用' })
+  private unCheckedChildren!: string;
 
-    const cssVars = computed(() => ({
-      '--LineSwitchCheckedColor': props.checkedColor,
-      '--LineSwitchUnCheckedColor': props.unCheckedColor,
-    }));
+  @Prop({ default: '#5755B3' }) private checkedColor!: string;
+  @Prop({ default: 'rgba(0,0,0,.25)' }) private unCheckedColor!: string;
+  @Prop({ default: true }) private checkedValue!: CheckedType;
+  @Prop({ default: false }) private unCheckedValue!: CheckedType;
+  @Prop({ default: false }) private checked!: CheckedType;
 
-    const isChecked = computed(
-      () => checkedData.checked === props.checkedValue
-    );
+  @Watch('checked') private watchChecked() {
+    this.checkedData = this.checked;
+  }
 
-    watch(
-      () => props.checked,
-      (cur) => {
-        checkedData.checked = cur;
-      }
-    );
-
-    const setChecked = (
-      check: CheckedType,
-      evt: MouseEvent | KeyboardEvent
-    ) => {
-      if (props.disabled) {
-        return;
-      }
-      if (props.checked === undefined) {
-        checkedData.checked = check;
-      }
-      emit('update:checked', check);
-      emit('change', check, evt);
-    };
-
-    const handleClick = (evt: MouseEvent) => {
-      const newChecked = isChecked.value
-        ? props.unCheckedValue
-        : props.checkedValue;
-      setChecked(newChecked, evt);
-      emit('click', newChecked, evt);
-    };
-
+  private get cssVars() {
     return {
-      finalCheckedChildren,
-      finalUnCheckedChildren,
-      cssVars,
-      isChecked,
-      handleClick,
+      '--LineSwitchCheckedColor': this.checkedColor,
+      '--LineSwitchUnCheckedColor': this.unCheckedColor,
     };
-  },
-});
+  }
+
+  private get isChecked() {
+    return this.checkedData === this.checkedValue;
+  }
+
+  private checkedData = this.checked;
+
+  private setChecked(check: CheckedType, evt: MouseEvent | KeyboardEvent) {
+    if (this.disabled) {
+      return;
+    }
+    if (this.checked === undefined) {
+      this.checkedData = check;
+    }
+    this.$emit('update:checked', check);
+    this.$emit('change', check, evt);
+  }
+
+  private handleClick(evt: MouseEvent) {
+    const newChecked = this.isChecked ? this.unCheckedValue : this.checkedValue;
+    this.setChecked(newChecked, evt);
+    this.$emit('click', newChecked, evt);
+  }
+}
 </script>

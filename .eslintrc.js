@@ -22,7 +22,7 @@ module.exports = defineConfig({
     extends: [
         'airbnb-base',
         'plugin:@typescript-eslint/recommended',
-        'plugin:vue/vue3-recommended',
+        'plugin:vue/recommended',
         'plugin:prettier/recommended',
     ],
     plugins: [
@@ -74,6 +74,7 @@ module.exports = defineConfig({
       'consistent-return': 'off', // 要求return语句一致返回
       'no-restricted-syntax': ['error', 'LabeledStatement', 'WithStatement'], // 禁止指定的语法
       '@typescript-eslint/no-non-null-assertion': 'off', // 禁止非空断言
-      'import/no-unresolved': ['error', { ignore: ['.css$'] }] // 忽略.css后缀名检查
+      'import/no-unresolved': ['error', { ignore: ['.css$'] }], // 忽略.css后缀名检查
+      'lines-between-class-members': ["error", "always", {exceptAfterSingleLine: true}], // 要求或禁止类成员之间有空行
     }
 });

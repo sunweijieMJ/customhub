@@ -1,7 +1,7 @@
 {
   "name": "@linehub/hooks",
   "description": "Linehub composables",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "main": "index.ts",
   "module": "index.ts",
   "unpkg": "index.js",
@@ -9,7 +9,7 @@
   "types": "index.d.ts",
   "license": "MIT",
   "peerDependencies": {
-    "vue": "^3.2.0"
+    "vue": "^2.6.14"
   },
   "gitHead": "c69724230befa8fede0e6b9c37fb0b7e39fd7cdd"
 }

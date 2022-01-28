@@ -23,7 +23,7 @@ export const buildFull = (minify: boolean) => async () => {
         extensions: ['.mjs', '.js', '.json', '.ts'],
       }),
       vue({
-        target: 'browser',
+        // target: 'browser',
         exposeFilename: false,
       }),
       commonjs(),

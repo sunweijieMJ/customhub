@@ -52,7 +52,7 @@
     "not op_mini all"
   ],
   "peerDependencies": {
-    "vue": "^3.2.0"
+    "vue": "^2.6.14"
   },
   "dependencies": {
     "@linehub/components": "workspace:*",
@@ -80,9 +80,6 @@
     "@types/through2": "2.0.36",
     "@typescript-eslint/eslint-plugin": "5.5.0",
     "@typescript-eslint/parser": "5.5.0",
-    "@vue/compiler-sfc": "3.2.23",
-    "@vue/shared": "3.2.23",
-    "@vue/test-utils": "2.0.0-rc.16",
     "chalk": "4.1.2",
     "components-helper": "1.0.4",
     "cz-conventional-changelog": "3.3.0",
@@ -109,7 +106,8 @@
     "rollup-plugin-css-only": "3.1.0",
     "rollup-plugin-esbuild": "4.7.2",
     "rollup-plugin-filesize": "9.1.1",
-    "rollup-plugin-vue": "6.0.0",
+    "rollup-plugin-vue": "5.1.9",
+    "rollup-plugin-vue2": "^0.8.1",
     "sass": "1.44.0",
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^8.0.0",
@@ -119,8 +117,11 @@
     "through2": "4.0.2",
     "ts-morph": "13.0.2",
     "typescript": "4.5.2",
-    "vue": "3.2.23",
+    "vue": "2.6.14",
+    "vue-class-component": "^7.2.6",
+    "vue-property-decorator": "^9.1.2",
     "vue-router": "4.0.12",
+    "vue-template-compiler": "^2.6.14",
     "vue-tsc": "0.29.8"
   }
 }

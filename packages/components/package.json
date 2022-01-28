@@ -1,9 +1,9 @@
 {
   "name": "@linehub/components",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "all components are settled here",
   "peerDependencies": {
-    "vue": "^3.2.0"
+    "vue": "^2.6.14"
   },
   "main": "index.ts",
   "module": "index.ts",

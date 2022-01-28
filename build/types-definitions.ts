@@ -20,6 +20,7 @@ export const generateTypesDefinitions = async () => {
       allowJs: true,
       declaration: true,
       emitDeclarationOnly: true,
+      experimentalDecorators: true,
       noEmitOnError: false,
       outDir,
       baseUrl: projRoot,

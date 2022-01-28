@@ -1,36 +1,18 @@
-import { setConfig } from '@linehub/utils/config';
-import { localeContextKey, localeProviderMaker } from '@linehub/hooks';
-import type { App, Plugin } from 'vue';
-import type { ComponentSize } from '@linehub/utils/types';
-import type { InstallOptions } from '@linehub/utils/config';
 import { version } from './version';
 
-const makeInstaller = (components: Plugin[] = []) => {
-  const apps: App[] = [];
-
-  const install = (app: App, opts: InstallOptions) => {
-    const defaultInstallOpt: InstallOptions = {
-      size: '' as ComponentSize,
-      zIndex: 2000,
-    };
-
-    const option = Object.assign(defaultInstallOpt, opts);
-    if (apps.includes(app)) return;
-    apps.push(app);
-
-    components.forEach((c) => {
-      app.use(c);
+const makeInstaller = (components: any[] = []) => {
+  const install = (Vue: any) => {
+    if ((install as any).installed) return;
+    (install as any).installed = true;
+    components.forEach((component: any) => {
+      // 在ts的版本中需要使用component.extendOptions.name，具体原因可以自己log看一下
+      Vue.component(component.extendOptions.name, component);
     });
-
-    if (option.locale) {
-      const localeProvides = localeProviderMaker(opts.locale);
-      app.provide(localeContextKey, localeProvides);
-    }
-
-    app.config.globalProperties.$ELEMENT = option;
-    // app.provide() ? is this better? I think its not that flexible but worth implement
-    setConfig(option);
   };
+
+  if (typeof window !== 'undefined' && (window as any).Vue) {
+    install((window as any).Vue);
+  }
 
   return {
     version,

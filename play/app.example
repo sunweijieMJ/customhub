@@ -1,12 +1,14 @@
 <template>
   <div class="demo">
-    <ElSwitch v-model="checkValue1" />
-    <LineSwitch v-model:checked="checkValue2" />
+    <LineSwitch :checked.sync="checkedValue" />
   </div>
 </template>
-<script setup lang="ts">
-import { ref } from 'vue';
-
-const checkValue1 = ref(false);
-const checkValue2 = ref(false);
+<script lang="ts">
+export default {
+  data() {
+    return {
+      checkedValue: true,
+    };
+  },
+};
 </script>

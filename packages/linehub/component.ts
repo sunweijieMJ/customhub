@@ -1,4 +1,3 @@
-import { LineSwitch } from '@linehub/components/switch';
-import { LineImage } from '@linehub/components/image';
+import LineSwitch from '@linehub/components/switch';
 
-export default [LineSwitch, LineImage];
+export default [LineSwitch];

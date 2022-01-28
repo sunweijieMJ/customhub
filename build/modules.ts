@@ -1,6 +1,6 @@
 import { rollup } from 'rollup';
 import type { OutputOptions } from 'rollup';
-import vue from 'rollup-plugin-vue';
+import vue from 'rollup-plugin-vue2';
 import css from 'rollup-plugin-css-only';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
@@ -22,12 +22,18 @@ export const buildModules = async () => {
       onlyFiles: true,
     })
   );
+
   const bundle = await rollup({
     input,
     plugins: [
       await LinehubAlias(),
       css(),
-      vue({ target: 'browser' }),
+      vue({
+        css: true,
+        compileTemplate: true,
+        include: /\.vue$/,
+        target: 'browser',
+      }),
       nodeResolve({
         extensions: ['.mjs', '.js', '.json', '.ts'],
       }),
@@ -41,6 +47,7 @@ export const buildModules = async () => {
     external: await generateExternal({ full: false }),
     treeshake: false,
   });
+
   await writeBundles(
     bundle,
     buildConfigEntries.map(([module, config]): OutputOptions => {
