@@ -12,12 +12,12 @@ export interface BuildInfo {
   output: {
     /** e.g: `es` */
     name: string;
-    /** e.g: `dist/linehub/es` */
+    /** e.g: `dist/customhub/es` */
     path: string;
   };
 
   bundle: {
-    /** e.g: `linehub/es` */
+    /** e.g: `customhub/es` */
     path: string;
   };
 }

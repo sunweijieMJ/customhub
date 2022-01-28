@@ -1,4 +1,4 @@
-import { withInstall } from '@linehub/utils/with-install';
+import { withInstall } from '@customhub/utils/with-install';
 
 import Image from './src/index.vue';
 

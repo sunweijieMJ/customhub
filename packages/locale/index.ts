@@ -59,7 +59,7 @@ export const use = (l: Language): void => {
     `:
       The previous i18n usage is deprecated please update to
       the new one to get reactive i18n translations, refer to:
-      https://linehub.org/#/en-US/component/i18n
+      https://customhub.org/#/en-US/component/i18n
     `
   );
 

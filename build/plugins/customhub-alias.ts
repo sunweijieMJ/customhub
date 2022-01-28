@@ -2,11 +2,11 @@ import type { Plugin } from 'rollup';
 import { EP_PKG, EP_PREFIX } from '../utils/constants';
 import { getDistPackages } from '../utils/pkg';
 
-export async function LinehubAlias(): Promise<Plugin> {
+export async function CustomhubAlias(): Promise<Plugin> {
   const pkgs = await getDistPackages();
 
   return {
-    name: 'linehub-alias-plugin',
+    name: 'customhub-alias-plugin',
     resolveId(id, importer, options) {
       if (!id.startsWith(EP_PREFIX)) return;
 

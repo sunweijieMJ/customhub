@@ -18,7 +18,7 @@ cyan(
   ['NOTICE:', `$TAG_VERSION: ${tagVersion}`, `$GIT_HEAD: ${gitHead}`].join('\n')
 );
 (async () => {
-  yellow(`Updating package.json for linehub`);
+  yellow(`Updating package.json for customhub`);
 
   const json: Record<string, any> = getPackageManifest(epPackage);
 

@@ -1,6 +1,6 @@
 {
-  "name": "@linehub/hooks",
-  "description": "Linehub composables",
+  "name": "@customhub/hooks",
+  "description": "Customhub composables",
   "version": "1.0.0",
   "main": "index.ts",
   "module": "index.ts",

@@ -1,5 +1,5 @@
 {
-  "name": "@linehub/components",
+  "name": "@customhub/components",
   "version": "1.0.0",
   "description": "all components are settled here",
   "peerDependencies": {

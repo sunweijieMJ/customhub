@@ -5,7 +5,7 @@
 ## Installation
 
 ```shell
-npm i linehub
+npm i customhub
 ```
 
 ## Usage
@@ -13,13 +13,13 @@ npm i linehub
 Use Sass import
 
 ```css
-@use 'linehub/lib/theme-chalk/index.scss';
+@use 'customhub/lib/theme-chalk/index.scss';
 ```
 
 Or Use vite/webpack
 
 ```javascript
-import 'linehub/lib/theme-chalk/index.css';
+import 'customhub/lib/theme-chalk/index.css';
 ```
 
 Or
@@ -27,15 +27,15 @@ Or
 ```html
 <link
   rel="stylesheet"
-  href="https://unpkg.com/linehub/lib/theme-chalk/index.css"
+  href="https://unpkg.com/customhub/lib/theme-chalk/index.css"
 />
 ```
 
 ## Import on demand
 
 ```javascript
-import 'linehub/lib/theme-chalk/input.css';
-import 'linehub/lib/theme-chalk/select.css';
+import 'customhub/lib/theme-chalk/input.css';
+import 'customhub/lib/theme-chalk/select.css';
 
 // ...
 ```

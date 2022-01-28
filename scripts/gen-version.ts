@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import pkg from '../packages/linehub/package.json'; // need to be checked
+import pkg from '../packages/customhub/package.json'; // need to be checked
 
 const tagVer = process.env.TAG_VERSION;
 let version = '';
@@ -12,7 +12,7 @@ if (tagVer) {
 }
 
 fs.writeFileSync(
-  path.resolve(__dirname, '../packages/linehub/version.ts'),
+  path.resolve(__dirname, '../packages/customhub/version.ts'),
   `export const version = '${version}';
 `
 );

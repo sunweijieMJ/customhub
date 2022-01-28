@@ -11,7 +11,7 @@ const reComponentName = (title: string) =>
     .toLowerCase()}`;
 
 const reDocUrl = (fileName, header) => {
-  const docs = 'https://linehub.org/en-US/component/';
+  const docs = 'https://customhub.org/en-US/component/';
   const newHeader = header ? header.replaceAll(/\s+/g, '-').toLowerCase() : '';
 
   return `${docs}${fileName}.html${newHeader ? '#' : ''}${newHeader}`;

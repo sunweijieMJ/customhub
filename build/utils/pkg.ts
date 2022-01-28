@@ -29,8 +29,8 @@ export const pathRewriter = (module: Module) => {
   const config = buildConfig[module];
 
   return (id: string) => {
-    id = id.replaceAll(`${EP_PREFIX}/theme-chalk`, 'linehub/theme-chalk');
-    // TODO: handle @linehub/icons
+    id = id.replaceAll(`${EP_PREFIX}/theme-chalk`, 'customhub/theme-chalk');
+    // TODO: handle @customhub/icons
     id = id.replaceAll(`${EP_PREFIX}/`, `${config.bundle.path}/`);
     return id;
   };

@@ -51,7 +51,7 @@
 </template>
 <script lang="ts">
 import { Vue, Component, Prop, Watch } from 'vue-property-decorator';
-import { handleImage } from '@linehub/utils/tools';
+import { handleImage } from '@customhub/utils/tools';
 
 @Component({
   name: 'LineImage',

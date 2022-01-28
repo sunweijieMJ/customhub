@@ -1,2 +1,2 @@
-import '@linehub/components/base/style';
-import '@linehub/theme-chalk/src/switch.scss';
+import '@customhub/components/base/style';
+import '@customhub/theme-chalk/src/switch.scss';

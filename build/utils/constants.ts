@@ -1,2 +1,2 @@
-export const EP_PREFIX = '@linehub';
-export const EP_PKG = 'linehub';
+export const EP_PREFIX = '@customhub';
+export const EP_PKG = 'customhub';

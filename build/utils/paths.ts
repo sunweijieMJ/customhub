@@ -7,14 +7,14 @@ export const themeRoot = resolve(pkgRoot, 'theme-chalk');
 export const hookRoot = resolve(pkgRoot, 'hooks');
 export const localeRoot = resolve(pkgRoot, 'locale');
 export const directiveRoot = resolve(pkgRoot, 'directives');
-export const epRoot = resolve(pkgRoot, 'linehub');
+export const epRoot = resolve(pkgRoot, 'customhub');
 export const utilRoot = resolve(pkgRoot, 'utils');
 export const docRoot = resolve(projRoot, 'docs');
 
 /** dist */
 export const buildOutput = resolve(projRoot, 'dist');
-/** dist/linehub */
-export const epOutput = resolve(buildOutput, 'linehub');
+/** dist/customhub */
+export const epOutput = resolve(buildOutput, 'customhub');
 
 export const projPackage = resolve(projRoot, 'package.json');
 export const compPackage = resolve(compRoot, 'package.json');

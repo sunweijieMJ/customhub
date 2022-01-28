@@ -1,4 +1,4 @@
-import { withInstall } from '@linehub/utils/with-install';
+import { withInstall } from '@customhub/utils/with-install';
 
 import Switch from './src/index.vue';
 

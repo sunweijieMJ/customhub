@@ -1,8 +1,8 @@
 // GlobalComponents for Volar
 declare module 'vue' {
   export interface GlobalComponents {
-    LineSwitch: typeof import('linehub')['LineSwitch'];
-    LineImage: typeof import('linehub')['LineImage'];
+    LineSwitch: typeof import('customhub')['LineSwitch'];
+    LineImage: typeof import('customhub')['LineImage'];
   }
 }
 

@@ -7,9 +7,9 @@ pnpm update:version
 
 pnpm build
 
-find dist/linehub/packages -type d -name node_modules -print0 | xargs -0 -I {} rm -rf {}
+find dist/customhub/packages -type d -name node_modules -print0 | xargs -0 -I {} rm -rf {}
 
-cd dist/linehub
+cd dist/customhub
 npm publish --access public
 cd -
 

@@ -1,2 +1,2 @@
-import '@linehub/components/base/style/css';
-import '@linehub/theme-chalk/line-image.css';
+import '@customhub/components/base/style/css';
+import '@customhub/theme-chalk/line-image.css';

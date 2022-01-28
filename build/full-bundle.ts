@@ -7,8 +7,8 @@ import esbuild from 'rollup-plugin-esbuild';
 import replace from '@rollup/plugin-replace';
 import filesize from 'rollup-plugin-filesize';
 import { parallel } from 'gulp';
-import { version } from '../packages/linehub/version';
-import { LinehubAlias } from './plugins/linehub-alias';
+import { version } from '../packages/customhub/version';
+import { CustomhubAlias } from './plugins/customhub-alias';
 import { epRoot, epOutput } from './utils/paths';
 import { generateExternal, writeBundles } from './utils/rollup';
 
@@ -18,7 +18,7 @@ export const buildFull = (minify: boolean) => async () => {
   const bundle = await rollup({
     input: path.resolve(epRoot, 'index.ts'),
     plugins: [
-      await LinehubAlias(),
+      await CustomhubAlias(),
       nodeResolve({
         extensions: ['.mjs', '.js', '.json', '.ts'],
       }),
@@ -42,13 +42,13 @@ export const buildFull = (minify: boolean) => async () => {
     ],
     external: await generateExternal({ full: true }),
   });
-  const banner = `/*! Linehub v${version} */\n`;
+  const banner = `/*! Customhub v${version} */\n`;
   await writeBundles(bundle, [
     {
       format: 'umd',
       file: path.resolve(epOutput, `dist/index.full${minify ? '.min' : ''}.js`),
       exports: 'named',
-      name: 'Linehub',
+      name: 'Customhub',
       globals: {
         vue: 'Vue',
       },

@@ -1,6 +1,6 @@
 {
-  "name": "@linehub/directives",
-  "description": "Linehub directives",
+  "name": "@customhub/directives",
+  "description": "Customhub directives",
   "version": "1.0.0",
   "main": "index.ts",
   "module": "index.ts",

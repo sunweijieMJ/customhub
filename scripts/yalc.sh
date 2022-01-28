@@ -4,15 +4,15 @@ set -e
 
 pnpm build
 
-cd dist/linehub
+cd dist/customhub
 
 yalc push
 
 cd ../../play
 
-pnpm uninstall linehub
-yalc remove linehub
-yalc add linehub
-pnpm i linehub
+pnpm uninstall customhub
+yalc remove customhub
+yalc add customhub
+pnpm i customhub
 
 echo "Publish completed"

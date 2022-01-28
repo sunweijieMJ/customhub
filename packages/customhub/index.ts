@@ -1,8 +1,8 @@
 import installer from './defaults';
 
-export * from '@linehub/components';
-export * from '@linehub/directives';
-export * from '@linehub/hooks';
+export * from '@customhub/components';
+export * from '@customhub/directives';
+export * from '@customhub/hooks';
 
 export { default as makeInstaller } from './make-installer';
 

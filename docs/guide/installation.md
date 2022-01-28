@@ -19,7 +19,7 @@ xxx 可以在支持 [ES2018](https://caniuse.com/?feats=mdn-javascript_builtins_
 
 xxx 目前还处于快速开发迭代中.
 
-[![Linehub version badge](https://img.shields.io/npm/v/linehub.svg?style=flat-square)](https://www.npmjs.org/package/linehub)
+[![Customhub version badge](https://img.shields.io/npm/v/customhub.svg?style=flat-square)](https://www.npmjs.org/package/customhub)
 
 ## 使用软件包管理器安装
 

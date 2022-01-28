@@ -1,5 +1,5 @@
 {
-  "name": "@linehub/theme-chalk",
+  "name": "@customhub/theme-chalk",
   "version": "0.1.0",
   "description": "Element component chalk theme.",
   "main": "index.css",
@@ -12,20 +12,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sunweijieMJ/linehub.git"
+    "url": "git+https://github.com/sunweijieMJ/customhub.git"
   },
   "keywords": [
     "vue-components",
-    "linehub",
+    "customhub",
     "theme-chalk",
     "theme-light"
   ],
   "author": "yi.shyang@ele.me",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sunweijieMJ/linehub/issues"
+    "url": "https://github.com/sunweijieMJ/customhub/issues"
   },
-  "homepage": "https://github.com/sunweijieMJ/linehub/blob/dev/packages/theme-chalk/README.md",
+  "homepage": "https://github.com/sunweijieMJ/customhub/blob/dev/packages/theme-chalk/README.md",
   "devDependencies": {
     "@types/gulp-autoprefixer": "0.0.33",
     "@types/gulp-clean-css": "4.3.0",

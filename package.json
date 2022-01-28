@@ -55,12 +55,12 @@
     "vue": "^2.6.14"
   },
   "dependencies": {
-    "@linehub/components": "workspace:*",
-    "@linehub/directives": "workspace:*",
-    "@linehub/hooks": "workspace:*",
-    "@linehub/locale": "workspace:*",
-    "@linehub/theme-chalk": "workspace:*",
-    "@linehub/utils": "workspace:*",
+    "@customhub/components": "workspace:*",
+    "@customhub/directives": "workspace:*",
+    "@customhub/hooks": "workspace:*",
+    "@customhub/locale": "workspace:*",
+    "@customhub/theme-chalk": "workspace:*",
+    "@customhub/utils": "workspace:*",
     "@vueuse/core": "^7.0.0",
     "dayjs": "^1.10.7",
     "lodash": "^4.17.21"

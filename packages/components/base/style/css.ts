@@ -1,1 +1,1 @@
-import '@linehub/theme-chalk/base.css';
+import '@customhub/theme-chalk/base.css';

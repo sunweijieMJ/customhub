@@ -8,7 +8,7 @@ import esbuild from 'rollup-plugin-esbuild';
 import filesize from 'rollup-plugin-filesize';
 import glob from 'fast-glob';
 import { epRoot, pkgRoot } from './utils/paths';
-import { LinehubAlias } from './plugins/linehub-alias';
+import { CustomhubAlias } from './plugins/customhub-alias';
 import { generateExternal, writeBundles } from './utils/rollup';
 import { excludeFiles } from './utils/pkg';
 import { reporter } from './plugins/size-reporter';
@@ -26,7 +26,7 @@ export const buildModules = async () => {
   const bundle = await rollup({
     input,
     plugins: [
-      await LinehubAlias(),
+      await CustomhubAlias(),
       css(),
       vue({
         css: true,

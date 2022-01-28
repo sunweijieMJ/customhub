@@ -6,7 +6,7 @@ export const generateExternal = async (options: { full: boolean }) => {
   return (id: string) => {
     const packages: string[] = ['vue'];
     if (!options.full) {
-      packages.push('linehub/theme-chalk');
+      packages.push('customhub/theme-chalk');
       // dependencies
       packages.push('@vue', ...getPackageDependencies(epPackage));
     }

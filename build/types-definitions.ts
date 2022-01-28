@@ -25,7 +25,7 @@ export const generateTypesDefinitions = async () => {
       outDir,
       baseUrl: projRoot,
       paths: {
-        '@linehub/*': ['packages/*'],
+        '@customhub/*': ['packages/*'],
       },
       skipLibCheck: true,
     },
@@ -34,7 +34,7 @@ export const generateTypesDefinitions = async () => {
   });
 
   const filePaths = excludeFiles(
-    await glob(['**/*.{js,ts,vue}', '!linehub/**/*'], {
+    await glob(['**/*.{js,ts,vue}', '!customhub/**/*'], {
       cwd: pkgRoot,
       absolute: true,
       onlyFiles: true,
