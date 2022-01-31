@@ -1,6 +1,6 @@
 {
   "name": "@customhub/components",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "all components are settled here",
   "peerDependencies": {
     "vue": "^2.6.14"

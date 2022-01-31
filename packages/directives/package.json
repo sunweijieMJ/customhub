@@ -1,7 +1,7 @@
 {
   "name": "@customhub/directives",
   "description": "Customhub directives",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "index.ts",
   "module": "index.ts",
   "unpkg": "index.js",

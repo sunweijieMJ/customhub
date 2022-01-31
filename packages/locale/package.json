@@ -1,7 +1,7 @@
 {
   "name": "@customhub/locale",
   "description": "Customhub locale",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "index.ts",
   "module": "index.ts",
   "unpkg": "index.js",
