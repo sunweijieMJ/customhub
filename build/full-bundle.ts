@@ -2,11 +2,12 @@ import path from 'path';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import { rollup } from 'rollup';
 import commonjs from '@rollup/plugin-commonjs';
-import vue from 'rollup-plugin-vue';
+import { createVuePlugin } from 'vite-plugin-vue2';
 import esbuild from 'rollup-plugin-esbuild';
 import replace from '@rollup/plugin-replace';
 import filesize from 'rollup-plugin-filesize';
 import { parallel } from 'gulp';
+import type { Plugin } from 'rollup';
 import { version } from '../packages/customhub/version';
 import { CustomhubAlias } from './plugins/customhub-alias';
 import { epRoot, epOutput } from './utils/paths';
@@ -22,10 +23,7 @@ export const buildFull = (minify: boolean) => async () => {
       nodeResolve({
         extensions: ['.mjs', '.js', '.json', '.ts'],
       }),
-      vue({
-        // target: 'browser',
-        exposeFilename: false,
-      }),
+      createVuePlugin() as Plugin,
       commonjs(),
       esbuild({
         minify,

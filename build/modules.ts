@@ -1,12 +1,13 @@
 import { rollup } from 'rollup';
-import type { OutputOptions } from 'rollup';
-import vue from 'rollup-plugin-vue2';
+import type { OutputOptions, Plugin } from 'rollup';
+import { createVuePlugin } from 'vite-plugin-vue2';
 import css from 'rollup-plugin-css-only';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import esbuild from 'rollup-plugin-esbuild';
 import filesize from 'rollup-plugin-filesize';
 import glob from 'fast-glob';
+
 import { epRoot, pkgRoot } from './utils/paths';
 import { CustomhubAlias } from './plugins/customhub-alias';
 import { generateExternal, writeBundles } from './utils/rollup';
@@ -28,12 +29,7 @@ export const buildModules = async () => {
     plugins: [
       await CustomhubAlias(),
       css(),
-      vue({
-        css: true,
-        compileTemplate: true,
-        include: /\.vue$/,
-        target: 'browser',
-      }),
+      createVuePlugin() as Plugin,
       nodeResolve({
         extensions: ['.mjs', '.js', '.json', '.ts'],
       }),

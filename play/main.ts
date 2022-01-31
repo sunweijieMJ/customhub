@@ -4,7 +4,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
 // eslint-disable-next-line
-import CustomHub from '../dist/customhub/dist/index.full.min.mjs';
+import CustomHub from '../dist/customhub/dist/index.full.mjs';
 // eslint-disable-next-line
 import '../dist/customhub/theme-chalk/index.css';
 
