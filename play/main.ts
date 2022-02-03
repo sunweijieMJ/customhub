@@ -4,9 +4,9 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
 // eslint-disable-next-line
-import CustomHub from '../dist/customhub/dist/index.full.mjs';
+import CustomHub from 'customhub';
 // eslint-disable-next-line
-import '../dist/customhub/theme-chalk/index.css';
+import 'customhub/theme-chalk/index.css';
 
 // eslint-disable-next-line
 import App from './src/App.vue';
